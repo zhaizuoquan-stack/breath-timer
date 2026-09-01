@@ -6,6 +6,8 @@
 
 - **使用**：直接双击打开 `index.html`（浏览器即可，无需安装任何依赖）。
 - **开发调试（可选）**：`python -m http.server 8080` 后访问 `http://localhost:8080`。
+- **在线访问（GitHub Pages）**：https://zhaizuoquan-stack.github.io/breath-timer/
+- **源码仓库**：https://github.com/zhaizuoquan-stack/breath-timer
 
 ## 测试
 
