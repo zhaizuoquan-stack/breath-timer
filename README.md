@@ -1,6 +1,23 @@
 # Breath Timer（呼吸计时器）
 
-呼吸练习计时应用。
+呼吸练习计时应用。可自定义吸气 / 屏息 / 呼气 / 休息时长，带合成音效引导与周期统计。
+
+## 运行
+
+- **使用**：直接双击打开 `index.html`（浏览器即可，无需安装任何依赖）。
+- **开发调试（可选）**：`python -m http.server 8080` 后访问 `http://localhost:8080`。
+
+## 测试
+
+```bash
+node --test test/          # 全量单测（Node ≥ 18 自带 test runner，零依赖）
+# 或逐个文件：node test/settings.test.js
+```
+
+## 文档
+
+- `docs/PRD.md` — 产品设计文档（需求基准）
+- `docs/tech-design.md` — 技术方案文档（实现基准）
 
 ## 项目规范
 

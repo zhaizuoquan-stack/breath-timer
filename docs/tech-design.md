@@ -151,6 +151,8 @@ BT.stateMachine = {
 
   createSession(settings): SessionState,        // 初始 IDLE 状态
   handleEvent(s, event, now): SessionState,     // 返回**新**状态对象（不可变风格）
+                                               // payload 语义：START/PAUSE/RESUME/STOP/PHASE_END 为时间戳 now(ms)；
+                                               // SETTINGS_CHANGED 为新 Settings 对象
   nextPhase(phase, restSec): phase,             // 相位转移（含 rest=0 跳过）
   cycleCompleteOnExit(phase, restSec): boolean, // EXHALE(rest=0) 或 REST 退出时 +1
   phaseDurationSec(s, phase): number,           // 当前设置下的相位时长
@@ -220,6 +222,7 @@ SessionState = {
   status: 'IDLE'|'RUNNING'|'PAUSED',
   phase: 'INHALE'|'HOLD'|'EXHALE'|'REST',
   phaseEndAt: number,        // 相位结束绝对时间戳 ms
+  phaseStartedAt: number,    // 相位开始绝对时间戳 ms（进度渲染用；RESUME 时按剩余反推）
   pausedRemainMs: number,    // 暂停时保存的剩余 ms
   cycleCount: number,        // 已完成周期数
   startedAt: number,         // 本次会话开始时间戳 ms
