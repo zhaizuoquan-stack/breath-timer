@@ -1,0 +1,29 @@
+# 操作系统文件
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# 构建产物
+dist/
+build/
+out/
+coverage/
+
+# 环境变量 / 密钥
+.env
+.env.*
+!.env.example
+
+# 日志
+*.log
